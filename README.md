@@ -2,6 +2,8 @@
 
 A Telescope previewer for [tldr-pages](https://github.com/tldr-pages).
 
+>The tldr-pages project is a collection of community-maintained help pages for command-line tools, that aims to be a simpler, more approachable complement to traditional [man pages](https://en.wikipedia.org/wiki/Man_page).
+
 ![screenshot](./assets/screencap.png)
 
 ## Install
