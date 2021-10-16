@@ -26,7 +26,7 @@ function M.pick()
     sorter = Sorter.get_generic_fuzzy_sorter(),
     previewer = require('telescope.previewers').new_termopen_previewer({
       get_command = function(entry)
-        return { require('tldr.config').config.tldr_command, entry.value, '-p' }
+        return { require('tldr.config').config.tldr_command, entry.value }
       end,
     }),
   })
