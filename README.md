@@ -20,6 +20,8 @@ You will also need a `tldr` client installed.
 - [tldr Node client](https://github.com/tldr-pages/tldr-node-client) - requires Node and `npm` to install
 - [tldr Python client](https://github.com/tldr-pages/tldr-python-client) - requires Python and `pip` to install
 
+Additionally, for preview scrolling to work, you will need to have [Less](https://github.com/gwsw/less) installed -- chances are it's already installed on your system.
+
 ## Config
 
 You can configure the `tldr` command used by calling `setup()` or in your Telescope config:
