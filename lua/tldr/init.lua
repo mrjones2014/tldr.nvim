@@ -36,7 +36,6 @@ function M.pick()
         end
 
         table.insert(args, entry.value)
-        vim.notify_once(vim.inspect(args))
         return args
       end,
     }),
