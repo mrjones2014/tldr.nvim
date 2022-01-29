@@ -26,17 +26,12 @@ function M.pick()
     sorter = Sorter.get_generic_fuzzy_sorter(),
     previewer = require('telescope.previewers').new_termopen_previewer({
       get_command = function(entry)
-        local args = {
+        return {
           vim.g.tldr_root_dir .. '/bin/tldr-pager.sh',
           require('tldr.config').config.tldr_command,
+          require('tldr.config').config.tldr_args,
+          entry.value,
         }
-
-        for _, arg in pairs(require('tldr.config').config.tldr_args or {}) do
-          table.insert(args, arg)
-        end
-
-        table.insert(args, entry.value)
-        return args
       end,
     }),
   })

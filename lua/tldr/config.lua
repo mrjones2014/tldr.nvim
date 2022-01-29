@@ -1,6 +1,6 @@
 local M = {}
 
-M.config = { tldr_command = 'tldr', tldr_args = {} }
+M.config = { tldr_command = 'tldr', tldr_args = '' }
 
 function M.setup(new_config)
   new_config = new_config or {}

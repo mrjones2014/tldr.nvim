@@ -24,20 +24,35 @@ Additionally, for preview scrolling to work, you will need to have [Less](https:
 
 ## Config
 
-You can configure the `tldr` command used by calling `setup()` or in your Telescope config:
+To configure:
 
 ```lua
-require('tldr').setup({ tldr_command = 'tldr' })
+require('tldr').setup({
+  -- your config here, see below for options
+})
 
 -- or
 
 require('telescope').setup({
   extensions = {
     tldr = {
-      tldr_command = 'tldr'
+      -- your config here, see below for options
     }
   }
 })
+```
+
+### Options
+
+Default config is shown below:
+
+```lua
+{
+  -- the shell command to use
+  tldr_command = 'tldr',
+  -- a string of extra arguments to pass to `tldr`, e.g. tldr_args = '--color always'
+  tldr_args = ''
+}
 ```
 
 ## Usage
