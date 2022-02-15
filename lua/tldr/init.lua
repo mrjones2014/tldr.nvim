@@ -7,7 +7,9 @@ end
 function M.pick()
   local commands = require('tldr.utils').get_cmds(require('tldr.config').config.tldr_command)
   if not commands or #commands < 1 then
-    vim.api.nvim_err_write('No commands found in tldr cache. Maybe you need to run `tldr --update`?')
+    vim.notify('No commands found in tldr cache. Maybe you need to run `tldr --update`?', vim.log.levels.ERROR, {
+      title = 'TLDR',
+    })
     return
   end
 
