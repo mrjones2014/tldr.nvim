@@ -43,10 +43,10 @@ end
 
 function M.health()
   -- health_start begins a new section
-  local health_start = vim.fn['health#report_start']
-  local health_ok = vim.fn['health#report_ok']
-  local health_error = vim.fn['health#report_error']
-  local health_info = vim.fn['health#report_info']
+  local health_start = vim.health.start
+  local health_ok = vim.health.ok
+  local health_error = vim.health.error
+  local health_info = vim.health.info
 
   health_start('tldr command')
   local configured_command = require('tldr.config').config.tldr_command
